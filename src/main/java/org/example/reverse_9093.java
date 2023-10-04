@@ -7,7 +7,6 @@ import java.util.StringTokenizer;
 
 public class reverse_9093 {
     public static void main(String[] args) throws IOException {
-        Stack<String> stack = new Stack<>();
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringBuilder ans = new StringBuilder();
         int t = Integer.parseInt(br.readLine());
