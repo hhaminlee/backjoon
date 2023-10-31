@@ -15,12 +15,13 @@ public class 베스트셀러_1302 {
             map.put(s,map.containsKey(s) ? map.get(s) + 1 : 1);
         }
         List<String> keySet = new ArrayList<>(map.keySet());
-        Collections.reverse(keySet);
 
-        for (String key : keySet) {
-            System.out.print("Key : " + key);
-            System.out.println(", Val : " + map.get(key));
+        String maxKey = null;
+        for (String key : map.keySet()) {
+            if ((maxKey == null) || ((map.get(key).compareTo(map.get(maxKey)) >= 0) && (key.compareTo(maxKey) < 0))) {
+                maxKey = key;
+            }
         }
-        System.out.println(map);
+        System.out.println(maxKey);
     }
 }
