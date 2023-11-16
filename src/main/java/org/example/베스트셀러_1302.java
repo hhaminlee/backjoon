@@ -16,10 +16,13 @@ public class 베스트셀러_1302 {
         }
         List<String> keySet = new ArrayList<>(map.keySet());
 
-        String maxKey = null;
-        for (String key : map.keySet()) {
-            if ((maxKey == null) || ((map.get(key).compareTo(map.get(maxKey)) >= 0) && (key.compareTo(maxKey) < 0))) {
-                maxKey = key;
+        String maxKey = "";
+        Collections.sort(keySet);
+        System.out.println(map);
+        for (String key : keySet) {
+            if ((maxKey.isEmpty()) || (map.get(key).compareTo(map.get(maxKey))>0)) {
+                if(key.compareTo(maxKey)>0)
+                    maxKey = key;
             }
         }
         System.out.println(maxKey);
