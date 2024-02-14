@@ -11,8 +11,6 @@ public class 다리놓기_1010 {
         for(int i=0; i<cnt; i++) {
             a = s.nextInt();
             b = s.nextInt();
-            sum1 =1;
-            sum2 =1;
             for(int j=1; j<=b-a; j++){
                 sum1*=j;
             }
