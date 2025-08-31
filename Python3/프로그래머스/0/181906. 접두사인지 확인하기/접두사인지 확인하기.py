@@ -1,0 +1,8 @@
+def solution(my_string, is_prefix):
+    answer = 0
+    for i in range(len(my_string)):
+        if my_string[:i] == is_prefix:
+            answer = 1
+            break
+        print(my_string[:i])
+    return answer
